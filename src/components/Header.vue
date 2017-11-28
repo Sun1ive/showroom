@@ -10,12 +10,11 @@
   </header>
 </template>
 
-<script>
-  export default {
-    
-  }
-</script>
-
 <style scoped>
-
+.navBar {
+  display: flex;
+  justify-content: space-around;
+  min-height: 50px;
+  align-items: center;
+}
 </style>
