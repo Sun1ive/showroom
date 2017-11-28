@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/PT Sans.eot'); /* IE9 Compat Modes */
+  src: local('PT Sans Narrow'), local('PTSans'),
+       url('../fonts/PT Sans.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/PT Sans.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/PT Sans.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/PT Sans.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/PT Sans.svg#PTSansNarrow') format('svg'); /* Legacy iOS */
+}
