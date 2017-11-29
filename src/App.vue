@@ -2,17 +2,21 @@
   <div id="app">
     <app-header/>
     <app-main/>
+
+    <app-modal/>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header'
 import Main from '@/components/Main'
+import Modal from '@/components/modal/Modal'
 
 export default {
   components: {
     'app-header': Header,
     'app-main': Main,
+    'app-modal': Modal,
   },
 };
 </script>

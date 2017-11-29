@@ -2,9 +2,9 @@
   <header>
     <nav>
       <ul class="navBar">
-        <li><a href="tel:123123123">Hello world</a></li>
-        <li><a href="tel:123123123">Hello world</a></li>
-        <li><a href="tel:123123123">Hello world</a></li>
+        <li><a class="info" href="tel:0980202092">098-02-02-092</a></li>
+        <li><a class="info" href="tel:0730202090">073-02-02-090</a></li>
+        <li><a class="info" href="mailto:info@indresser.com">info@indresser.com</a></li>
       </ul>
     </nav>
   </header>
@@ -16,5 +16,10 @@
   justify-content: space-around;
   min-height: 50px;
   align-items: center;
+}
+.info {
+  color: #fff;
+  text-shadow: 1px 1px 1px #333;
+  font-size: responsive 1rem 1.4rem;
 }
 </style>
