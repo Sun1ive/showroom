@@ -6,16 +6,22 @@
       <div class="close" @click="closeForm"></div>
       <div class="field">
         <label class="label">Ваше имя</label>
-        <div class="control">
+        <div class="control has-icons-left">
           <input required class="input is-info" v-model="userData.name" type="text" placeholder="Введите Ваше имя">
+          <span class="icon is-small is-left">
+            <i class="fa fa-user"></i>
+          </span>
         </div>
       </div>
       <div class="field">
         <label class="label">Ваш телефон</label>
-        <div class="control">
+        <div class="control has-icons-left">
           <input required class="input is-info" v-model="userData.phone" type="tel" placeholder="Введите Ваш телефон">
+          <span class="icon is-small is-left">
+            <i class="fa fa-phone"></i>
+          </span>
         </div>
-        <p class="help is-danger" v-if="error">Пожалуйста введите корректный номер</p>
+        <p class="help is-danger" v-if="error">{{ errorMessage }}</p>
       </div>
       <button type="submit" class="button is-info">Отправить</button>
     </form>
@@ -36,6 +42,7 @@ export default {
   data() {
     return {
       error: false,
+      errorMessage: null,
       userData: {
         name: '',
         phone: null,
@@ -47,8 +54,8 @@ export default {
       try {
         const validate = new RegExp(/^[0-9]+$/);
         if (!validate.test(this.userData.phone)) {
+          this.errorMessage = 'Пожалуйста введите корректный номер';
           this.error = true;
-          console.log(this.userData.phone);
           this.userData.phone = '';
           return;
         }
@@ -70,8 +77,15 @@ export default {
           name: '',
           phone: null,
         };
+        this.$emit('closeForm');
+        this.$emit('showModal');
       } catch (error) {
-        console.log(error);
+        this.userData = {
+          name: null,
+          phone: null,
+        }
+        this.error = true;
+        this.errorMessage = error.message;
       }
     },
     closeForm() {

@@ -7,9 +7,9 @@
       <a class="button is-link is-outlined is-large" @click="showForm">Узнать адресс</a>
     </section>
 
-    <!-- <app-modal :isActive="isActive" @closeModal="closeModal"></app-modal> -->
+    <app-modal :active="active" @closeModal="closeModal"></app-modal>
 
-    <app-Form @closeForm="closeForm" :isActive="isActive"></app-Form>
+    <app-Form @showModal="showModal" @closeForm="closeForm" :isActive="isActive"></app-Form>
   </main>
 </template>
 
@@ -25,6 +25,7 @@ export default {
   data() {
     return {
       isActive: false,
+      active: false,
     };
   },
   methods: {
@@ -34,6 +35,12 @@ export default {
     closeForm() {
       this.isActive = false;
     },
+    showModal() {
+      this.active = true;
+    },
+    closeModal() {
+      this.active = false;
+    }
   },
 };
 </script>

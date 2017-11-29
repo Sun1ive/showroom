@@ -1,9 +1,11 @@
 <template>
-<div :class="{ 'is-active': isActive }" class="modal">
+<div :class="{ 'is-active': active }" class="modal">
   <div class="modal-background"></div>
-  <div class="modal-content">
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia consequuntur obcaecati adipisci quae earum similique, impedit, non at dolores enim doloremque facilis odit quam magnam fugit, labore expedita blanditiis reprehenderit autem quaerat voluptates molestias repellat. Dolores quos mollitia ut tempore, quibusdam tenetur similique ex deleniti voluptate suscipit? Voluptates, iste at!
-  <button class="modal-close is-large" aria-label="close" @click="closeModal"></button>
+    <div class="modal-content">
+      <i class="fa fa-map-marker"></i>
+      <h1>Николая оводова 49</h1>
+      <p>вход со двора</p>
+      <div class="close" @click="closeModal"></div>
   </div>
 </div>
 </template>
@@ -11,7 +13,7 @@
 <script>
 export default {
   props: {
-    isActive: {
+    active: {
       type: Boolean,
       required: true,
     },
@@ -25,16 +27,31 @@ export default {
 </script>
 
 <style scoped>
+i {
+  font-size: responsive 1rem 4rem;
+  color: #3273dc;
+}
+h1 {
+  font-size: responsive 1rem 3.5rem;
+  line-height: 1;
+}
+p {
+  font-size: responsive 1rem 2rem;
+}
 .modal-content {
   background-color: #fff;
   padding: 2rem;
   position: relative;
   border-radius: 15px;
+  color: #000;
 }
-.modal-close.is-large {
+.modal-content .close {
   position: absolute;
-  top: 4%;
-  right: 1%;
-  background-color: #c0c0c0;
+  top: 10px;
+  right: 10px;
+  background: url('../../assets/close.svg') no-repeat center center;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
 }
 </style>
