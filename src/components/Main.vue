@@ -66,4 +66,7 @@ h3 {
   text-shadow: -1px -1px #000, 0px 1px 0px #444;
   font-weight: bold;
 }
+.button {
+  margin-top: 2rem;
+}
 </style>

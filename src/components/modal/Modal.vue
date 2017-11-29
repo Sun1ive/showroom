@@ -29,6 +29,7 @@ export default {
   background-color: #fff;
   padding: 2rem;
   position: relative;
+  border-radius: 15px;
 }
 .modal-close.is-large {
   position: absolute;
