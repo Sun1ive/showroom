@@ -29,7 +29,7 @@
 .navBar i {
   margin-right: .5rem;
   font-size: 1.5rem;
-  color: #000;
+  color: #fff;
 }
 .info {
   color: #fff;
@@ -37,7 +37,7 @@
   font-size: responsive 1rem 1.4rem;
 }
 
-@media (max-width: 440px) {
+@media (max-width: 540px) {
   .navBar {
     flex-direction: column;
     font-size: 1.1rem;

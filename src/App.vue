@@ -26,6 +26,8 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  /* background-image: url('./assets/bg.png'); */
+  min-height: 100vh;
   background-image: url('./assets/background.jpg');
   background-repeat: no-repeat;
   background-size: cover;

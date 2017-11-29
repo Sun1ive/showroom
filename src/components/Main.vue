@@ -4,16 +4,20 @@
       <h1>Открытие showroom</h1>
       <h2>В Виннице</h2>
       <h3>от производителя дизайнерской одежды</h3>
-      <a class="button is-link is-outlined is-large" @click="showForm">Узнать адресс</a>
+      <a class="button is-info is-large" @click="showForm">Узнать адресс</a>
+      
     </section>
 
     <app-modal :active="active" @closeModal="closeModal"></app-modal>
 
     <app-Form @showModal="showModal" @closeForm="closeForm" :isActive="isActive"></app-Form>
+
   </main>
 </template>
 
 <script>
+import axios from 'axios';
+
 import Modal from '@/components/modal/Modal';
 import Form from '@/components/modal/Form';
 
@@ -26,6 +30,7 @@ export default {
     return {
       isActive: false,
       active: false,
+      count: null,
     };
   },
   methods: {
@@ -41,7 +46,7 @@ export default {
     closeModal() {
       this.active = false;
     }
-  },
+  }
 };
 </script>
 
@@ -52,7 +57,7 @@ main {
   align-items: center;
   justify-content: center;
   flex-grow: 1;
-  min-height: 95vh;
+  min-height: 85vh;
 }
 .head {
   font-weight: bold;
@@ -67,7 +72,7 @@ h1 {
   line-height: 1;
 }
 h2 {
-  font-size: responsive 1.1rem 7rem;
+  font-size: responsive 1.1rem 5rem;
   text-shadow: -1px -1px #000, 0px 1px 0px #444;
   font-weight: bold;
   line-height: 1;
