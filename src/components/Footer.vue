@@ -32,7 +32,10 @@ export default {
 <style scoped>
 h4 {
   padding-bottom: 2rem;
+  color: #fff;
+  text-transform: uppercase;
   font-size: responsive 1rem 2rem;
+  text-shadow: 1px 1px 1px #333;
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 </style>

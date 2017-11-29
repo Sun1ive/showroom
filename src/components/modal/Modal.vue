@@ -2,8 +2,9 @@
 <div :class="{ 'is-active': active }" class="modal">
   <div class="modal-background"></div>
     <div class="modal-content">
+      <h2>Спасибо! <br> Наш менеджер скоро свяжется с Вами!</h2>
       <i class="fa fa-map-marker"></i>
-      <h1>Николая оводова 49</h1>
+      <h1>ул. Николая оводова 49</h1>
       <p>вход со двора</p>
       <div class="close" @click="closeModal"></div>
   </div>
@@ -12,11 +13,16 @@
 
 <script>
 export default {
-  props: {
+/*   props: {
     active: {
       type: Boolean,
       required: true,
     },
+  }, */
+  data() {
+    return {
+      // active: true,
+    }
   },
   methods: {
     closeModal() {
@@ -34,6 +40,9 @@ i {
 h1 {
   font-size: responsive 1rem 3.5rem;
   line-height: 1;
+}
+h2 {
+  font-size: responsive 1rem 2rem;
 }
 p {
   font-size: responsive 1rem 2rem;
