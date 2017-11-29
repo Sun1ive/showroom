@@ -4,12 +4,12 @@
       <h1>Открытие showroom</h1>
       <h2>В Виннице</h2>
       <h3>от производителя дизайнерской одежды</h3>
-      <a class="button is-link is-outlined is-large" @click="showModal">Узнать адресс</a>
+      <a class="button is-link is-outlined is-large" @click="showForm">Узнать адресс</a>
     </section>
 
     <!-- <app-modal :isActive="isActive" @closeModal="closeModal"></app-modal> -->
 
-    <app-Form></app-Form>
+    <app-Form @closeForm="closeForm" :isActive="isActive"></app-Form>
   </main>
 </template>
 
@@ -28,10 +28,10 @@ export default {
     };
   },
   methods: {
-    showModal() {
+    showForm() {
       this.isActive = true;
     },
-    closeModal() {
+    closeForm() {
       this.isActive = false;
     },
   },

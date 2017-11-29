@@ -2,9 +2,18 @@
   <header>
     <nav>
       <ul class="navBar">
-        <li><a class="info" href="tel:0980202092">098-02-02-092</a></li>
-        <li><a class="info" href="tel:0730202090">073-02-02-090</a></li>
-        <li><a class="info" href="mailto:info@indresser.com">info@indresser.com</a></li>
+        <li>
+          <i class="fa fa-phone" aria-hidden="true"></i>
+          <a class="info" href="tel:0980202092">098-02-02-092</a>
+        </li>
+        <li>
+          <i class="fa fa-phone" aria-hidden="true"></i>
+          <a class="info" href="tel:0730202090">073-02-02-090</a>
+        </li>
+        <li>
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <a class="info" href="mailto:info@indresser.com">info@indresser.com</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -16,6 +25,11 @@
   justify-content: space-around;
   min-height: 50px;
   align-items: center;
+}
+.navBar i {
+  margin-right: .5rem;
+  font-size: 1.5rem;
+  color: #000;
 }
 .info {
   color: #fff;
@@ -29,7 +43,7 @@
     font-size: 1.1rem;
   }
   .navBar li {
-    padding: .3rem 0;
+    padding: 0.3rem 0;
   }
 }
 </style>

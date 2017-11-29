@@ -3,6 +3,7 @@
   <div class="modal-background"></div>
   <div class="modal-content">
     <form id="form" @submit.prevent="submitData">
+      <div class="close" @click="closeForm"></div>
       <div class="field">
         <label class="label">Ваше имя</label>
         <div class="control">
@@ -26,9 +27,14 @@
 import axios from 'axios';
 
 export default {
+  props: {
+    isActive: {
+      type: Boolean,
+      required: true,
+    },
+  },
   data() {
     return {
-      isActive: true,
       error: false,
       userData: {
         name: '',
@@ -55,18 +61,21 @@ export default {
           // 'info@indresser.com',
           'sunliveua@gmail.com',
           'Заявка с сайта showroom.indresser.com',
-          `Пользователь: ${this.userData.name}   Телефон:${this.userData.phone}`,
+          `Пользователь: ${this.userData.name}   Телефон: ${this.userData.phone}`,
           'mail.adm.tools',
           'info@indresser.com',
           '6oRAaL4x8Ce7',
         );
         this.userData = {
           name: '',
-          phone: null
-        }
+          phone: null,
+        };
       } catch (error) {
         console.log(error);
       }
+    },
+    closeForm() {
+      this.$emit('closeForm');
     },
   },
 };
@@ -81,8 +90,18 @@ export default {
   min-height: 100px;
   background-color: #fff;
   padding: 1rem 5rem;
+  position: relative;
 }
 #form .button {
   margin-top: 1.1rem;
+}
+#form .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: url('../../assets/close.svg') no-repeat center center;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
 }
 </style>
