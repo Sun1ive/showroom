@@ -22,4 +22,14 @@
   text-shadow: 1px 1px 1px #333;
   font-size: responsive 1rem 1.4rem;
 }
+
+@media (max-width: 440px) {
+  .navBar {
+    flex-direction: column;
+    font-size: 1.1rem;
+  }
+  .navBar li {
+    padding: .3rem 0;
+  }
+}
 </style>

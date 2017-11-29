@@ -41,7 +41,7 @@ main {
   align-items: center;
   justify-content: center;
   flex-grow: 1;
-  min-height: 100vh;
+  min-height: 95vh;
 }
 .head {
   font-weight: bold;
@@ -50,19 +50,19 @@ main {
 }
 
 h1 {
-  font-size: responsive 2rem 9rem;
+  font-size: responsive 1.3rem 9rem;
   text-shadow: -1px -1px #000, 0px 1px 0px #444;
   font-weight: bold;
   line-height: 1;
 }
 h2 {
-  font-size: responsive 1.5rem 7rem;
+  font-size: responsive 1.1rem 7rem;
   text-shadow: -1px -1px #000, 0px 1px 0px #444;
   font-weight: bold;
   line-height: 1;
 }
 h3 {
-  font-size: responsive 1.1rem 4rem;
+  font-size: responsive 1rem 4rem;
   text-shadow: -1px -1px #000, 0px 1px 0px #444;
   font-weight: bold;
 }
