@@ -2,21 +2,20 @@
   <div id="app">
     <app-header/>
     <app-main/>
-
-    <app-modal/>
+    <app-footer/>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header'
 import Main from '@/components/Main'
-import Modal from '@/components/modal/Modal'
+import Footer from '@/components/Footer'
 
 export default {
   components: {
     'app-header': Header,
     'app-main': Main,
-    'app-modal': Modal,
+    'app-footer': Footer,
   },
 };
 </script>

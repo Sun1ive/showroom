@@ -4,13 +4,34 @@
       <h1>Открытие showroom</h1>
       <h2>В Виннице</h2>
       <h3>от производителя дизайнерской одежды</h3>
-      <a class="button is-link is-outlined is-large">Узнать адресс</a>
+      <a class="button is-link is-outlined is-large" @click="showModal">Узнать адресс</a>
     </section>
+
+    <app-modal :isActive="isActive" @closeModal="closeModal"></app-modal>
   </main>
 </template>
 
 <script>
-export default {};
+import Modal from '@/components/modal/Modal';
+
+export default {
+  components: {
+    'app-modal': Modal,
+  },
+  data() {
+    return {
+      isActive: false,
+    };
+  },
+  methods: {
+    showModal() {
+      this.isActive = true;
+    },
+    closeModal() {
+      this.isActive = false;
+    },
+  },
+};
 </script>
 
 <style scoped>
