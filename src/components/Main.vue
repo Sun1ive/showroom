@@ -7,16 +7,20 @@
       <a class="button is-link is-outlined is-large" @click="showModal">Узнать адресс</a>
     </section>
 
-    <app-modal :isActive="isActive" @closeModal="closeModal"></app-modal>
+    <!-- <app-modal :isActive="isActive" @closeModal="closeModal"></app-modal> -->
+
+    <app-Form></app-Form>
   </main>
 </template>
 
 <script>
 import Modal from '@/components/modal/Modal';
+import Form from '@/components/modal/Form';
 
 export default {
   components: {
     'app-modal': Modal,
+    'app-Form': Form,
   },
   data() {
     return {
