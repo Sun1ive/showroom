@@ -13,16 +13,11 @@
 
 <script>
 export default {
-/*   props: {
+  props: {
     active: {
       type: Boolean,
       required: true,
     },
-  }, */
-  data() {
-    return {
-      // active: true,
-    }
   },
   methods: {
     closeModal() {
